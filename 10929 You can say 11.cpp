@@ -13,33 +13,35 @@ const ll inf = 1e9;
 
 map< int, int >mp;
 
-void solve(){
+bool solve(string s){
 
-    ll a,b, n,m, i,j,k;
-    cin>>n;
+    int num=s[0]-'0';
+    for(int i=1; i<s.size(); i++){
+        num=num*10;
+        num=num+(s[i]-'0');
+        num=num%11;
+    }
+    return num==0;
 
-    for(i=2; i<=n; i++){
-        k=i;
-        cout<<i<<" : ";
-        while(k<=n){
-            mp[k]++;
-            k=k*i;
-            cout<<k<<' ';
-        }
-        cout<<endl;
-    }
-    for(i=2; i<=n; i++){
-        if(mp[i]>=2){
-            cout<<i<<endl;
-        }
-    }
 }
 
 int main(){
     Fast;///using Fast I/O
-    read(x);
-    write(x);
-    solve();
+    //read(x);
+    //write(x);
+    string s;
+    while(cin>>s){
+        if(s.size()==1 and s[0]=='0')
+            break;
+        if(solve(s)){
+            printf("%s is a multiple of 11.\n", s.c_str());
+        }
+        else{
+            printf("%s is not a multiple of 11.\n",s.c_str());
+        }
+
+    }
+
 
     return 0;
 }
