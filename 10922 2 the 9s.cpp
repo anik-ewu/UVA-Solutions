@@ -17,10 +17,10 @@ void solve(int num, int d){
 
     if(num<=17){
         if(num==9){
-            printf("%s  is a multiple of 9 and has 9-degree %d.\n",s.c_str(),d);
+            printf("%s is a multiple of 9 and has 9-degree %d.\n",s.c_str(),d);
         }
         else{
-           printf("%s  is not a multiple of 9.\n",s.c_str());    
+           printf("%s is not a multiple of 9.\n",s.c_str());    
         }
         return ;
     }
@@ -36,8 +36,8 @@ void solve(int num, int d){
 
 int main(){
     Fast;///using Fast I/O
-    read(x);
-    write(x);
+    //read(x);
+    //write(x);
     while(cin>>s){
         if(s.size()==1 and s[0]=='0')
             break;
