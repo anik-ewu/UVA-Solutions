@@ -3,6 +3,7 @@ using namespace std;
 int main()
 {
     long long int  a,b,c,d,e,f=0,g,h,i;
+    
     while(cin>>a>>b)
     {
     if(a<b)
